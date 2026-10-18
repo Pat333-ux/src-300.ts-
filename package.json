@@ -1,16 +1,6 @@
 {
   "name": "src-300.ts-",
   "version": "1.0.0",
-  "description": "Program 300 Core Engine  The primary orchestration engine for Beast 3.0.  Responsibilities: - Member Intake - Eligibility Evaluation - Resource Allocation - Audit Logging - Human Development Tracking - Government Assistance Routing - Life Preservation Scoring - Cloud Synchronization  Principle: Preserve Life",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://localhost:26831/Pat333-ux/src-300.ts-"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "description": "Responsive member dashboard preview for Indiana residents",
+  "private": true
 }
