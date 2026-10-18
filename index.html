@@ -51,7 +51,7 @@
       .sidebar {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 28px;
         padding: 28px 20px;
         background: #fff;
         border-right: 1px solid var(--line);
@@ -105,10 +105,10 @@
       }
 
       .nav-links a {
-        padding: 11px 12px;
+        padding: 9px 10px;
         border-radius: 10px;
         color: #606c83;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 600;
         text-decoration: none;
       }
@@ -351,6 +351,71 @@
         white-space: nowrap;
       }
 
+      .content-section {
+        scroll-margin-top: 24px;
+        margin-top: 34px;
+        padding: 23px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: #fff;
+      }
+
+      .content-section h2 {
+        margin-bottom: 9px;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+      }
+
+      .content-section > p {
+        max-width: 760px;
+        margin-bottom: 0;
+        color: var(--ink-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .content-section > p + p {
+        margin-top: 12px;
+      }
+
+      .notice {
+        margin-top: 14px;
+        padding: 13px 15px;
+        border-left: 3px solid #e1a43b;
+        border-radius: 5px 10px 10px 5px;
+        background: #fff8e9;
+        color: #73521d;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .status-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 17px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .status-list li {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 13px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: #394760;
+        font-size: 13px;
+      }
+
+      .status-list span {
+        color: var(--ink-soft);
+        font-size: 11px;
+        text-align: right;
+      }
+
       footer {
         margin-top: 33px;
         padding-top: 18px;
@@ -375,6 +440,10 @@
 
         .card {
           min-height: 0;
+        }
+
+        .status-list {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -433,95 +502,190 @@
   </head>
   <body>
     <div class="app-shell">
-      <aside class="sidebar" aria-label="Member dashboard navigation">
-        <a class="brand" href="#dashboard" aria-label="Program 300 member dashboard">
+      <aside class="sidebar" aria-label="Program 300 navigation">
+        <a class="brand" href="#home" aria-label="Program 300 home">
           <span class="brand-mark" aria-hidden="true">P300</span>
           <span>
             <span class="brand-name">Program 300</span>
-            <span class="brand-caption">Member community</span>
+            <span class="brand-caption">Resource coordination</span>
           </span>
         </a>
 
         <nav aria-label="Main navigation">
-          <p class="nav-label">Member space</p>
+          <p class="nav-label">Program 300</p>
           <div class="nav-links">
-            <a href="#dashboard" aria-current="page">Dashboard</a>
-            <a href="#benefits">Member benefits</a>
-            <a href="#resources">Resource areas</a>
-            <a href="#about">About</a>
+            <a href="#home" aria-current="page">Home</a>
+            <a href="#about">About Program 300</a>
+            <a href="#member-portal">Member Portal</a>
+            <a href="#resource-catalog">Resource Catalog</a>
+            <a href="#development-plans">Development Plans</a>
+            <a href="#referrals">Referrals</a>
+            <a href="#organizations">Organizations</a>
+            <a href="#audit-transparency">Audit Transparency</a>
+            <a href="#contact">Contact</a>
           </div>
         </nav>
 
         <div class="sidebar-note">
-          <strong>Preview dashboard</strong>
-          This page is a design preview. Member accounts and live services are not connected.
+          <strong>Website preview</strong>
+          This static preview has no member accounts or connected services.
         </div>
       </aside>
 
-      <main id="dashboard">
+      <main id="home">
         <div class="topbar">
           <p class="eyebrow">New World Order Private Government DAO LLC</p>
-          <span class="preview-tag">Member dashboard preview</span>
+          <span class="preview-tag">Program 300 preview</span>
         </div>
 
         <section aria-labelledby="welcome-heading">
-          <h1 id="welcome-heading">Welcome to your member dashboard</h1>
+          <h1 id="welcome-heading">Program 300</h1>
           <p class="intro">
-            A place to explore well-being support and community resource areas for Indiana residents.
-            This preview is for people who are housed or unhoused.
+            A resource coordination and human development platform operated by New World Order
+            Private Government DAO LLC.
           </p>
+          <p class="intro">
+            Our mission is to help participating members identify resources, organize personal goals,
+            track referrals, and pursue long-term stability through responsible self-development.
+          </p>
+          <div class="notice">
+            Program 300 does not determine legal eligibility for government benefits and does not
+            guarantee receipt of any public or private assistance.
+          </div>
         </section>
 
         <section class="hero" aria-labelledby="hero-heading">
-          <p class="hero-label">Well-being in Indiana</p>
-          <h2 id="hero-heading">A higher standard of well-being support for Indiana residents.</h2>
+          <p class="hero-label">Member portal</p>
+          <h2 id="hero-heading">A clear starting point for your resource journey.</h2>
           <p>
-            Everyone deserves to be treated with dignity. Explore the member benefit overview and
-            resource areas currently planned for this community.
+            Explore this preview of the Program 300 experience. The page is informational only;
+            sign-in, personal records, and member services are not connected.
           </p>
-          <a class="hero-link" href="#benefits">Explore member benefits</a>
+          <a class="hero-link" href="#member-portal">View portal information</a>
+        </section>
+
+        <section id="about" class="content-section" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Program 300</h2>
+          <p>
+            Program 300 is presented as a resource coordination and human development platform for
+            participating members. Its stated purpose is to help members identify resources, organize
+            personal goals, track referrals, and pursue long-term stability through responsible
+            self-development.
+          </p>
+          <p>
+            New World Order Private Government DAO LLC is an independent organization. It is not an
+            Indiana or federal government agency.
+          </p>
+        </section>
+
+        <section id="member-portal" class="content-section" aria-labelledby="portal-heading">
+          <h2 id="portal-heading">Member Portal</h2>
+          <p>
+            This static dashboard preview is available to view. Member registration, authentication,
+            personalized accounts, and live member services are not implemented or connected.
+          </p>
+        </section>
+
+        <section id="resource-catalog" class="content-section" aria-labelledby="catalog-heading">
+          <h2 id="catalog-heading">Resource Catalog</h2>
+          <p>
+            Planned catalog categories include housing, food and essentials, well-being, education,
+            employment, transportation, and community support. No verified provider listings or
+            resource referrals are connected in this preview.
+          </p>
+        </section>
+
+        <section id="development-plans" class="content-section" aria-labelledby="plans-heading">
+          <h2 id="plans-heading">Development Plans</h2>
+          <p>
+            Personal goal organization and development planning are part of the stated platform
+            concept. Creating, saving, or tracking individual plans is not available in this static
+            preview.
+          </p>
+        </section>
+
+        <section id="referrals" class="content-section" aria-labelledby="referrals-heading">
+          <h2 id="referrals-heading">Referrals</h2>
+          <p>
+            Referral coordination is a planned platform area. This preview does not submit, store, or
+            track referrals.
+          </p>
+        </section>
+
+        <section id="organizations" class="content-section" aria-labelledby="organizations-heading">
+          <h2 id="organizations-heading">Organizations</h2>
+          <p>
+            A directory of participating organizations is not yet available. No organizations or
+            service providers have been verified for this preview.
+          </p>
+        </section>
+
+        <section id="audit-transparency" class="content-section" aria-labelledby="audit-heading">
+          <h2 id="audit-heading">Audit Transparency</h2>
+          <p>
+            Audit logging is described in the project architecture, but an operational audit log or
+            public audit feed is not included in this static website preview.
+          </p>
         </section>
 
         <section id="benefits" aria-labelledby="benefits-heading">
           <div class="section-heading">
-            <h2 id="benefits-heading">Premium member benefits</h2>
-            <p>Program details and eligibility have not been provided yet.</p>
+            <h2 id="benefits-heading">Well-being and benefits information</h2>
+            <p>No benefits or eligibility have been verified or guaranteed.</p>
           </div>
           <div class="card-grid">
             <article class="card">
               <div class="card-icon" aria-hidden="true">♡</div>
               <h3>Well-being support</h3>
-              <p>Information about support options will be shared here when available.</p>
+              <p>Information about support options will be listed here when verified and available.</p>
             </article>
             <article class="card">
               <div class="card-icon" aria-hidden="true">⌂</div>
-              <h3>Housing resource areas</h3>
-              <p>Planned resource information for Indiana residents, whether housed or unhoused.</p>
+              <h3>Indiana resource information</h3>
+              <p>
+                The intended audience includes Indiana residents, whether housed or unhoused.
+                Resources are not connected in this preview.
+              </p>
             </article>
             <article class="card">
               <div class="card-icon" aria-hidden="true">＋</div>
-              <h3>Community connections</h3>
-              <p>Details about member connections and services are not available in this preview.</p>
+              <h3>Member benefits</h3>
+              <p>Program details and availability have not been provided; no assistance is guaranteed.</p>
             </article>
           </div>
         </section>
 
-        <section id="resources" class="info-panel" aria-labelledby="resources-heading">
-          <div>
-            <h2 id="resources-heading">Resource areas</h2>
-            <p>
-              Housing, food and essentials, well-being, and community referrals are shown as planned
-              categories only. No resource listings or referrals are currently connected.
-            </p>
-          </div>
-          <span class="info-pill">Not connected yet</span>
+        <section class="content-section" aria-labelledby="capabilities-heading">
+          <h2 id="capabilities-heading">Platform capabilities and status</h2>
+          <p>
+            Project materials describe the capabilities below. Only this static dashboard preview
+            is present in this repository; the other items are not confirmed as implemented or live.
+          </p>
+          <ul class="status-list">
+            <li>Dashboard <span>Static preview available</span></li>
+            <li>Member intake <span>Not implemented here</span></li>
+            <li>Resource navigation tools <span>Informational links only</span></li>
+            <li>Referral tracking <span>Not implemented here</span></li>
+            <li>Development planning <span>Not implemented here</span></li>
+            <li>Audit event logging <span>Not implemented here</span></li>
+            <li>Cloud integration architecture <span>Architecture only; no live integration</span></li>
+            <li>Administrative controls <span>Not implemented here</span></li>
+          </ul>
         </section>
 
-        <footer id="about">
-          <strong>About this preview:</strong> New World Order Private Government DAO LLC is presented
-          here as an independent organization, not an Indiana or federal government agency. This
-          dashboard is a design preview; benefits, eligibility, accounts, and services are not
-          verified or guaranteed. Confirm any program details directly with the organization.
+        <section id="contact" class="content-section" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact</h2>
+          <p>
+            Contact details have not been provided for this preview. No phone number, email address,
+            or support channel is currently published here.
+          </p>
+        </section>
+
+        <footer>
+          <strong>Preview notice:</strong> Program 300 does not determine legal eligibility for
+          government benefits and does not guarantee receipt of public or private assistance. This
+          static page does not provide legal, financial, housing, or health advice. Verify program
+          information directly with the relevant provider.
         </footer>
       </main>
     </div>
